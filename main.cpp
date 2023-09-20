@@ -7,7 +7,6 @@ int HEIGHT;
 
 void draw_pixel(int x, int y)
 {
-
     glBegin(GL_POINTS);
     glColor3f(1, 1, 1);
     std::cout << x << ' ' << y << '\n';
