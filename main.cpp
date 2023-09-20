@@ -41,18 +41,39 @@ void drawLine(int x0, int y0, int x1, int y1)
         s = 1;
         std::swap(x0, x1);
         std::swap(y0, y1);
-        dx = -dx;
-        dy = -dy;
+        dx = x1 - x0;
+        dy = y1 - y0;
     }
     else if (dx < 0)
     {
         s = 2;
+        y0 = -y0;
+        y1 = -y1;
+        std::swap(x0, x1);
+        std::swap(y0, y1);
+        dx = x1 - x0;
+        dy = y1 - y0;
     }
     else
     {
         s = 3;
+        y0 = -y0;
+        y1 = -y1;
+        dx = x1 - x0;
+        dy = y1 - y0;
     }
 
+    int b = 0;
+    if (abs(dy) > abs(dx))
+    {
+        b = 1;
+        std::swap(x0, y0);
+        std::swap(x1, y1);
+        dx = x1 - x0;
+        dy = y1 - y0;
+    }
+
+    std::cout << s;
     int d = 2 * dy - dx;
 
     int E = 2 * dy;
@@ -61,8 +82,22 @@ void drawLine(int x0, int y0, int x1, int y1)
     int x = x0;
     int y = y0;
 
-    draw_pixel(x, y);
-
+    if (b)
+    {
+        std::swap(x, y);
+    }
+    if (s >= 2)
+    {
+        draw_pixel(x, -y);
+    }
+    else
+    {
+        draw_pixel(x, y);
+    }
+    if (b)
+    {
+        std::swap(x, y);
+    }
     while (x < x1)
     {
         if (d <= 0)
@@ -75,7 +110,22 @@ void drawLine(int x0, int y0, int x1, int y1)
             y++;
         }
         x++;
-        draw_pixel(x, y);
+        if (b)
+        {
+            std::swap(x, y);
+        }
+        if (s >= 2)
+        {
+            draw_pixel(x, -y);
+        }
+        else
+        {
+            draw_pixel(x, y);
+        }
+        if (b)
+        {
+            std::swap(x, y);
+        }
     }
 }
 
