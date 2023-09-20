@@ -3,6 +3,7 @@
 
 #include "Headers/Point.hpp"
 #include "Headers/Line.hpp"
+#include "Headers/Circle.hpp"
 
 // Global Variables
 int WIDTH;
@@ -22,6 +23,8 @@ void init()
 void render()
 {
     glClear(GL_COLOR_BUFFER_BIT);
+    Circle *c = new Circle(new Point(200, 200), 40);
+    c->render();
     glutSwapBuffers();
 }
 
