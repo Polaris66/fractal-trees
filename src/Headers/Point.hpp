@@ -5,6 +5,7 @@ class Point
 public:
     int x, y;
     Point(int _x, int _y);
+    Point *translate(int _x, int _y);
     void render();
     void renderTranslated(int _x, int _y);
     Point *copy();

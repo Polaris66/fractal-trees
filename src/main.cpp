@@ -4,6 +4,7 @@
 #include "Headers/Point.hpp"
 #include "Headers/Line.hpp"
 #include "Headers/Circle.hpp"
+#include "Headers/Tree.hpp"
 
 // Global Variables
 int WIDTH;
@@ -13,7 +14,7 @@ void init()
 {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(0, WIDTH, 0, HEIGHT, -1, 1);
+    glOrtho(0, 200, 0, 200, -1, 1);
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -23,8 +24,7 @@ void init()
 void render()
 {
     glClear(GL_COLOR_BUFFER_BIT);
-    Circle *c = new Circle(new Point(200, 200), 40);
-    c->render();
+    new Tree(new Point(100, 100), 40);
     glutSwapBuffers();
 }
 

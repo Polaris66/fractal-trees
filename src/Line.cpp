@@ -4,8 +4,17 @@
 
 Line::Line(Point *_a, Point *_b)
 {
+    Line(_a, _b, true);
+}
+
+Line::Line(Point *_a, Point *_b, bool flag)
+{
     a = _a;
     b = _b;
+    if (flag)
+    {
+        render();
+    }
 }
 
 void Line::render()

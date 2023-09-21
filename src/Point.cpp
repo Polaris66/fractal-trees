@@ -9,6 +9,14 @@ Point::Point(int _x, int _y)
     y = _y;
 }
 
+Point *Point::translate(int _x, int _y)
+{
+    x += _x;
+    y += _y;
+
+    return this;
+}
+
 void Point::render()
 {
     glBegin(GL_POINTS);
