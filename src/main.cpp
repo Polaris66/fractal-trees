@@ -11,6 +11,9 @@
 int WIDTH;
 int HEIGHT;
 
+/**
+ * @brief This function iniatilises viewport
+ */
 void init()
 {
     glMatrixMode(GL_PROJECTION);
@@ -22,7 +25,9 @@ void init()
     glLoadIdentity();
 }
 
-// Draw Scene Function
+/**
+ * @brief This function is used to make the objects needed.
+ */
 void render()
 {
     glClear(GL_COLOR_BUFFER_BIT);
@@ -31,8 +36,11 @@ void render()
     glutSwapBuffers();
 }
 
-// Main Function
-// Returns integer for error handling
+/**
+ * @param  -the main function of the program.
+ *
+ * @brief This function is used to call to make the window and all the object needed
+ */
 int main(int argc, char **argv)
 {
     WIDTH = 1080, HEIGHT = 1080;

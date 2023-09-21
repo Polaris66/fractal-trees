@@ -2,11 +2,22 @@
 #include <cmath>
 #include "Headers/Line.hpp"
 
+/**
+ * @param  - 2 points to make the line.
+ *
+ * @brief This function is used to make the line object.
+ *
+ */
 Line::Line(Point *_a, Point *_b)
 {
     Line(_a, _b, true);
 }
 
+/**
+ * @param  - 2 points to make the line.
+ *
+ * @brief used to render the line onto the window
+ */
 Line::Line(Point *_a, Point *_b, bool flag)
 {
     a = _a;
@@ -17,6 +28,13 @@ Line::Line(Point *_a, Point *_b, bool flag)
     }
 }
 
+/**
+ * @param  - point, angle the the length of the next branch to be made.
+ *
+ * @brief This function is used to make the line after shifting throughsome angle of the given length.
+ *
+ * @return the line after the following transformation
+ */
 Line::Line(Point *_a, double theta, double l)
 {
     a = _a->copy();
@@ -26,6 +44,11 @@ Line::Line(Point *_a, double theta, double l)
     render();
 }
 
+/**
+ * @brief the main logic behind the line object which is being renderred on the screen. This function is used to render the line object. It tranforms lines in all the 8 sections to the base case where the slope is between 0 and 1 and dy < dx.
+ *
+ * @return
+ */
 void Line::render()
 {
     int dx = b->x - a->x;

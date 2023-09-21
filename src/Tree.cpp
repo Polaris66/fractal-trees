@@ -4,16 +4,36 @@
 #include <cmath>
 
 #include "Headers/Tree.hpp"
+
+/**
+ * @param -The root of the tree, the depth of the tree , and also the scale.
+ *
+ * @brief The base function to create a tree object
+ *
+ */
 Tree::Tree(Point *_root, int _depth, int _scale)
 {
     scale = _scale;
 }
 
+/**
+ * @param  - it takes the number of iterations, the angle with which it will turn and also the length of the branches.
+ *
+ * @brief This function is used to make the tree by calling the line function recursively.
+ */
 Tree::Tree(Point *_root, int _depth)
 {
     scale = 100;
     render(5, 0.3926991, 0.1, 20);
 }
+
+/**
+ * @param  - it takes the number of iterations, the angle with which it will turn and also the length of the branches.It shows the main logic behind the code wherein it maintains a stack and calls a recursive formula to make a specific kind of tree
+ *
+ * @brief This function is used to render the tree by calling the line function recursively.
+ *
+ * @return It renders the tree on the window.
+ */
 void Tree::render(int n, double dA, double dL, double L)
 {
     std::stack<std::pair<Point *, std::pair<double, double>>> St;
@@ -59,6 +79,14 @@ void Tree::render(int n, double dA, double dL, double L)
         }
     }
 }
+
+/**
+ * @param  - The string s and the map to convert F to a given function
+ *
+ * @brief This function is used to make the nth string that is to be called in the render function.
+ *
+ * @return It shows the next string.
+ */
 std::string Tree::nthWord(std::string s, std::unordered_map<char, std::string> m, int n)
 {
     if (n == 0)
@@ -71,7 +99,13 @@ std::string Tree::nthWord(std::string s, std::unordered_map<char, std::string> m
 
     return s;
 }
-
+/**
+ * @param  - The string s and the map to convert F to a given function and thr strind that is already made.
+ *
+ * @brief This function is used to make the string
+ *
+ * @return It shows the next string.
+ */
 std::string Tree::nextWord(std::string s, std::unordered_map<char, std::string> &m)
 {
     std::string res = "";
