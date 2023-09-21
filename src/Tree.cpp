@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stack>
 #include <cmath>
+#include <GL/glut.h>
 
 #include "Headers/Tree.hpp"
 
@@ -24,7 +25,45 @@ Tree::Tree(Point *_root, int _depth, int _scale)
 Tree::Tree(Point *_root, int _depth)
 {
     scale = 100;
-    render(5, 0.3926991, 0.1, 20);
+    render(6, 0.4, 4, 20);
+}
+
+/**
+ * @param h The Hue of the color
+ * @brief Converts color according to given hue
+ */
+void changeColor(int h)
+{
+    double c = 1;
+    double k = (int)(h / (double)60) % 2 - 1;
+    if (k < 0)
+        k = -k;
+    double x = 1 - k;
+
+    if (h < 60)
+    {
+        glColor3f(c, x, 0.0f);
+    }
+    else if (h < 120)
+    {
+        glColor3f(x, c, 0.0f);
+    }
+    else if (h < 180)
+    {
+        glColor3f(0, c, x);
+    }
+    else if (h < 240)
+    {
+        glColor3f(0, x, c);
+    }
+    else if (h < 300)
+    {
+        glColor3f(x, 0, c);
+    }
+    else if (h < 360)
+    {
+        glColor3f(c, 0, x);
+    }
 }
 
 /**
@@ -37,7 +76,7 @@ Tree::Tree(Point *_root, int _depth)
 void Tree::render(int n, double dA, double dL, double L)
 {
     std::stack<std::pair<Point *, std::pair<double, double>>> St;
-    std::unordered_map<char, std::string> m = {{'F', "FF-[-F+F+F]+[+F - F - F]"}};
+    std::unordered_map<char, std::string> m = {{'F', "[-F][-F][-F]F[+F]F[+F][+F]"}};
     std::string word = nthWord("F", m, n);
 
     Point *p = new Point(320, 0);
@@ -49,6 +88,7 @@ void Tree::render(int n, double dA, double dL, double L)
         switch (c)
         {
         case 'F':
+            changeColor(((int)L * 12) % 360);
             new Line(p, theta, L);
             p->print();
             std::cout << p << ' ' << theta << ' ' << L << std::endl;

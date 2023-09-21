@@ -40,7 +40,6 @@ Point *Point::translate(double _x, double _y)
 void Point::render()
 {
     glBegin(GL_POINTS);
-    glColor3f(1, 1, 1);
     // this->print();
     glVertex2i(x, y);
     glEnd();

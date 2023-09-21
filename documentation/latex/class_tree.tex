@@ -1,0 +1,135 @@
+\doxysection{Tree Class Reference}
+\hypertarget{class_tree}{}\label{class_tree}\index{Tree@{Tree}}
+
+
+{\ttfamily \#include $<$Tree.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tree_a73ea60d566005ee4ae13c20cc4f00f1b}{Tree}} (\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}\+\_\+root, int \+\_\+depth)
+\begin{DoxyCompactList}\small\item\em This function is used to make the tree by calling the line function recursively. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree_a4979fd640d564de32c4348742c7d47b7}{Tree}} (\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}\+\_\+root, int \+\_\+depth, int \+\_\+scale)
+\begin{DoxyCompactList}\small\item\em The base function to create a tree object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tree_a8874922b18e250a393ff65e5cbea96f6}{render}} (int n, double dA, double dL, double L)
+\begin{DoxyCompactList}\small\item\em This function is used to render the tree by calling the line function recursively. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_tree_a699489c407a01edb95ac47930011e153}{nth\+Word}} (std\+::string s, std\+::unordered\+\_\+map$<$ char, std\+::string $>$ m, int n)
+\begin{DoxyCompactList}\small\item\em This function is used to make the nth string that is to be called in the render function. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_tree_a0bb7ab2e8cf813687713d6f36b695818}{next\+Word}} (std\+::string s, std\+::unordered\+\_\+map$<$ char, std\+::string $>$ \&m)
+\begin{DoxyCompactList}\small\item\em This function is used to make the string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_tree_a6a2acb2c50f7a67bf40fd656820660c3}{scale}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tree_a73ea60d566005ee4ae13c20cc4f00f1b}\label{class_tree_a73ea60d566005ee4ae13c20cc4f00f1b} 
+\index{Tree@{Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree@{Tree}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}}]{\+\_\+root,  }\item[{int}]{\+\_\+depth }\end{DoxyParamCaption})}
+
+
+
+This function is used to make the tree by calling the line function recursively. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & it takes the number of iterations, the angle with which it will turn and also the length of the branches. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_tree_a4979fd640d564de32c4348742c7d47b7}\label{class_tree_a4979fd640d564de32c4348742c7d47b7} 
+\index{Tree@{Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree@{Tree}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}}]{\+\_\+root,  }\item[{int}]{\+\_\+depth,  }\item[{int}]{\+\_\+scale }\end{DoxyParamCaption})}
+
+
+
+The base function to create a tree object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/\+The} & root of the tree, the depth of the tree , and also the scale.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tree_a0bb7ab2e8cf813687713d6f36b695818}\label{class_tree_a0bb7ab2e8cf813687713d6f36b695818} 
+\index{Tree@{Tree}!nextWord@{nextWord}}
+\index{nextWord@{nextWord}!Tree@{Tree}}
+\doxysubsubsection{\texorpdfstring{nextWord()}{nextWord()}}
+{\footnotesize\ttfamily std\+::string Tree\+::next\+Word (\begin{DoxyParamCaption}\item[{std\+::string}]{s,  }\item[{std\+::unordered\+\_\+map$<$ char, std\+::string $>$ \&}]{m }\end{DoxyParamCaption})}
+
+
+
+This function is used to make the string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & The string s and the map to convert F to a given function and thr strind that is already made.\\
+\hline
+\end{DoxyParams}
+
+
+\begin{DoxyReturn}{Returns}
+It shows the next string. 
+\end{DoxyReturn}
+\Hypertarget{class_tree_a699489c407a01edb95ac47930011e153}\label{class_tree_a699489c407a01edb95ac47930011e153} 
+\index{Tree@{Tree}!nthWord@{nthWord}}
+\index{nthWord@{nthWord}!Tree@{Tree}}
+\doxysubsubsection{\texorpdfstring{nthWord()}{nthWord()}}
+{\footnotesize\ttfamily std\+::string Tree\+::nth\+Word (\begin{DoxyParamCaption}\item[{std\+::string}]{s,  }\item[{std\+::unordered\+\_\+map$<$ char, std\+::string $>$}]{m,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+This function is used to make the nth string that is to be called in the render function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & The string s and the map to convert F to a given function\\
+\hline
+\end{DoxyParams}
+
+
+\begin{DoxyReturn}{Returns}
+It shows the next string. 
+\end{DoxyReturn}
+\Hypertarget{class_tree_a8874922b18e250a393ff65e5cbea96f6}\label{class_tree_a8874922b18e250a393ff65e5cbea96f6} 
+\index{Tree@{Tree}!render@{render}}
+\index{render@{render}!Tree@{Tree}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Tree\+::render (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double}]{dA,  }\item[{double}]{dL,  }\item[{double}]{L }\end{DoxyParamCaption})}
+
+
+
+This function is used to render the tree by calling the line function recursively. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & it takes the number of iterations, the angle with which it will turn and also the length of the branches.\+It shows the main logic behind the code wherein it maintains a stack and calls a recursive formula to make a specific kind of tree\\
+\hline
+\end{DoxyParams}
+
+
+\begin{DoxyReturn}{Returns}
+It renders the tree on the window. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_tree_a6a2acb2c50f7a67bf40fd656820660c3}\label{class_tree_a6a2acb2c50f7a67bf40fd656820660c3} 
+\index{Tree@{Tree}!scale@{scale}}
+\index{scale@{scale}!Tree@{Tree}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily int Tree\+::scale}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/polaris/fractal-\/trees/src/\+Headers/\mbox{\hyperlink{_tree_8hpp}{Tree.\+hpp}}\item 
+/home/polaris/fractal-\/trees/src/\mbox{\hyperlink{_tree_8cpp}{Tree.\+cpp}}\end{DoxyCompactItemize}

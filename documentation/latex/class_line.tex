@@ -1,0 +1,114 @@
+\doxysection{Line Class Reference}
+\hypertarget{class_line}{}\label{class_line}\index{Line@{Line}}
+
+
+{\ttfamily \#include $<$Line.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_line_af7939ed2a9583de247812f57316a0c10}{Line}} (\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}\+\_\+a, \mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}\+\_\+b)
+\begin{DoxyCompactList}\small\item\em This function is used to make the line object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_line_a12b1cf208defa923acc9ffb0234e83bf}{Line}} (\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_line_a25a9177d83b8fdad4745f7b014951a43}{a}}, \mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_line_a2ca8a04cb0c1d6de29bf8b46b61d502e}{b}}, bool flag)
+\begin{DoxyCompactList}\small\item\em used to render the line onto the window \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_line_ac0f8455d98658260912cad371189f1c6}{Line}} (\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_line_a25a9177d83b8fdad4745f7b014951a43}{a}}, double theta, double l)
+\begin{DoxyCompactList}\small\item\em This function is used to make the line after shifting throughsome angle of the given length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_a96abaed66c444d9b6a4b656d0af2fcc1}{render}} ()
+\begin{DoxyCompactList}\small\item\em the main logic behind the line object which is being renderred on the screen. This function is used to render the line object. It tranforms lines in all the 8 sections to the base case where the slope is between 0 and 1 and dy \texorpdfstring{$<$}{<} dx. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_line_a25a9177d83b8fdad4745f7b014951a43}{a}}
+\item 
+\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_line_a2ca8a04cb0c1d6de29bf8b46b61d502e}{b}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_line_af7939ed2a9583de247812f57316a0c10}\label{class_line_af7939ed2a9583de247812f57316a0c10} 
+\index{Line@{Line}!Line@{Line}}
+\index{Line@{Line}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Line\+::\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}}]{\+\_\+a,  }\item[{\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}}]{\+\_\+b }\end{DoxyParamCaption})}
+
+
+
+This function is used to make the line object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & 2 points to make the line.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_line_a12b1cf208defa923acc9ffb0234e83bf}\label{class_line_a12b1cf208defa923acc9ffb0234e83bf} 
+\index{Line@{Line}!Line@{Line}}
+\index{Line@{Line}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Line\+::\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}}]{\+\_\+a,  }\item[{\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}}]{\+\_\+b,  }\item[{bool}]{flag }\end{DoxyParamCaption})}
+
+
+
+used to render the line onto the window 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & 2 points to make the line. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_line_ac0f8455d98658260912cad371189f1c6}\label{class_line_ac0f8455d98658260912cad371189f1c6} 
+\index{Line@{Line}!Line@{Line}}
+\index{Line@{Line}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Line\+::\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*}}]{\+\_\+a,  }\item[{double}]{theta,  }\item[{double}]{l }\end{DoxyParamCaption})}
+
+
+
+This function is used to make the line after shifting throughsome angle of the given length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & point, angle the the length of the next branch to be made.\\
+\hline
+\end{DoxyParams}
+
+
+\begin{DoxyReturn}{Returns}
+the line after the following transformation 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_line_a96abaed66c444d9b6a4b656d0af2fcc1}\label{class_line_a96abaed66c444d9b6a4b656d0af2fcc1} 
+\index{Line@{Line}!render@{render}}
+\index{render@{render}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Line\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+the main logic behind the line object which is being renderred on the screen. This function is used to render the line object. It tranforms lines in all the 8 sections to the base case where the slope is between 0 and 1 and dy \texorpdfstring{$<$}{<} dx. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_line_a25a9177d83b8fdad4745f7b014951a43}\label{class_line_a25a9177d83b8fdad4745f7b014951a43} 
+\index{Line@{Line}!a@{a}}
+\index{a@{a}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}}\texorpdfstring{$\ast$}{*} Line\+::a}
+
+\Hypertarget{class_line_a2ca8a04cb0c1d6de29bf8b46b61d502e}\label{class_line_a2ca8a04cb0c1d6de29bf8b46b61d502e} 
+\index{Line@{Line}!b@{b}}
+\index{b@{b}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*} Line\+::b}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/polaris/fractal-\/trees/src/\+Headers/\mbox{\hyperlink{_line_8hpp}{Line.\+hpp}}\item 
+/home/polaris/fractal-\/trees/src/\mbox{\hyperlink{_line_8cpp}{Line.\+cpp}}\end{DoxyCompactItemize}

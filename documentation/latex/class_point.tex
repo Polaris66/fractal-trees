@@ -1,0 +1,262 @@
+\doxysection{Point Class Reference}
+\hypertarget{class_point}{}\label{class_point}\index{Point@{Point}}
+
+
+{\ttfamily \#include $<$Point.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_point_acf2d96a374f9b7c9c636ba1a2ad42f02}{Point}} (int \+\_\+x, int \+\_\+y)
+\begin{DoxyCompactList}\small\item\em This function is used to make the point object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_point_aa624f58c5d0c803aa1f5155da70df977}{translate}} (double \+\_\+x, double \+\_\+y)
+\begin{DoxyCompactList}\small\item\em This function is used to shift the point in x and y direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a13321b6bf38854bfad01803a4ec2c38f}{render}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to render the point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a1e566c2740a309135160a41fef0b6454}{render\+Translated}} (int \+\_\+x, int \+\_\+y)
+\begin{DoxyCompactList}\small\item\em This function is used to shift the point in x and y direction and render it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_point_a6a53d6dbc42347471fc6173713a4e901}{copy}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to make a copy of a point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a76c5855c06d98aed16b5796a9a50bbee}{print}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to print the point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a495390045f75f077a0a395a692916173}{render\+Reflected\+Diagonal}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to swap the x and y values of the point and render the point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a70e2c8fa5d8e8d8c1133d56abb177166}{render\+ReflectedX}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to reflect the x value of the point and render the point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a89fd151dda891725b2d7d57326501799}{render\+ReflectedY}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to reflect the y value of the point and then render the point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a6fd7be09ae804f452894c415054b2afb}{reflect\+Diagonal}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to swap the x and y values of the point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a6c55e483657df3bcf04fa6bd1908f428}{reflectX}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to reflect the x value of the point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a8a9ffab18f44a956854ad119b1bd16e1}{reflectY}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to reflect the y value of the point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_point_a8c779e11e694b20e0946105a9f5de842}{x}}
+\item 
+int \mbox{\hyperlink{class_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_point_acf2d96a374f9b7c9c636ba1a2ad42f02}\label{class_point_acf2d96a374f9b7c9c636ba1a2ad42f02} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{int}]{\+\_\+x,  }\item[{int}]{\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+This function is used to make the point object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & the x and y values of the point\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_point_a6a53d6dbc42347471fc6173713a4e901}\label{class_point_a6a53d6dbc42347471fc6173713a4e901} 
+\index{Point@{Point}!copy@{copy}}
+\index{copy@{copy}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*} Point\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to make a copy of a point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & It takes the point object as a paramter\\
+\hline
+\end{DoxyParams}
+
+
+\begin{DoxyReturn}{Returns}
+It returns the new point. 
+\end{DoxyReturn}
+\Hypertarget{class_point_a76c5855c06d98aed16b5796a9a50bbee}\label{class_point_a76c5855c06d98aed16b5796a9a50bbee} 
+\index{Point@{Point}!print@{print}}
+\index{print@{print}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Point\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to print the point. 
+
+\Hypertarget{class_point_a6fd7be09ae804f452894c415054b2afb}\label{class_point_a6fd7be09ae804f452894c415054b2afb} 
+\index{Point@{Point}!reflectDiagonal@{reflectDiagonal}}
+\index{reflectDiagonal@{reflectDiagonal}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{reflectDiagonal()}{reflectDiagonal()}}
+{\footnotesize\ttfamily void Point\+::reflect\+Diagonal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to swap the x and y values of the point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & It takes the point object as a paramter \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_point_a6c55e483657df3bcf04fa6bd1908f428}\label{class_point_a6c55e483657df3bcf04fa6bd1908f428} 
+\index{Point@{Point}!reflectX@{reflectX}}
+\index{reflectX@{reflectX}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{reflectX()}{reflectX()}}
+{\footnotesize\ttfamily void Point\+::reflectX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to reflect the x value of the point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & It takes the point object as a paramter \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_point_a8a9ffab18f44a956854ad119b1bd16e1}\label{class_point_a8a9ffab18f44a956854ad119b1bd16e1} 
+\index{Point@{Point}!reflectY@{reflectY}}
+\index{reflectY@{reflectY}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{reflectY()}{reflectY()}}
+{\footnotesize\ttfamily void Point\+::reflectY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to reflect the y value of the point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & It takes the point object as a paramter \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_point_a13321b6bf38854bfad01803a4ec2c38f}\label{class_point_a13321b6bf38854bfad01803a4ec2c38f} 
+\index{Point@{Point}!render@{render}}
+\index{render@{render}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Point\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to render the point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & the x and y values of the point\\
+\hline
+\end{DoxyParams}
+
+
+\begin{DoxyReturn}{Returns}
+It renders the point. 
+\end{DoxyReturn}
+\Hypertarget{class_point_a495390045f75f077a0a395a692916173}\label{class_point_a495390045f75f077a0a395a692916173} 
+\index{Point@{Point}!renderReflectedDiagonal@{renderReflectedDiagonal}}
+\index{renderReflectedDiagonal@{renderReflectedDiagonal}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{renderReflectedDiagonal()}{renderReflectedDiagonal()}}
+{\footnotesize\ttfamily void Point\+::render\+Reflected\+Diagonal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to swap the x and y values of the point and render the point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & It takes the point object as a paramter \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_point_a70e2c8fa5d8e8d8c1133d56abb177166}\label{class_point_a70e2c8fa5d8e8d8c1133d56abb177166} 
+\index{Point@{Point}!renderReflectedX@{renderReflectedX}}
+\index{renderReflectedX@{renderReflectedX}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{renderReflectedX()}{renderReflectedX()}}
+{\footnotesize\ttfamily void Point\+::render\+ReflectedX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to reflect the x value of the point and render the point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & It takes the point object as a paramter \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_point_a89fd151dda891725b2d7d57326501799}\label{class_point_a89fd151dda891725b2d7d57326501799} 
+\index{Point@{Point}!renderReflectedY@{renderReflectedY}}
+\index{renderReflectedY@{renderReflectedY}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{renderReflectedY()}{renderReflectedY()}}
+{\footnotesize\ttfamily void Point\+::render\+ReflectedY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to reflect the y value of the point and then render the point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & It takes the point object as a paramter \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_point_a1e566c2740a309135160a41fef0b6454}\label{class_point_a1e566c2740a309135160a41fef0b6454} 
+\index{Point@{Point}!renderTranslated@{renderTranslated}}
+\index{renderTranslated@{renderTranslated}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{renderTranslated()}{renderTranslated()}}
+{\footnotesize\ttfamily void Point\+::render\+Translated (\begin{DoxyParamCaption}\item[{int}]{\+\_\+x,  }\item[{int}]{\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+This function is used to shift the point in x and y direction and render it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & the x and y values of the point\\
+\hline
+\end{DoxyParams}
+
+
+\begin{DoxyReturn}{Returns}
+It retunrns the shifted point. 
+\end{DoxyReturn}
+\Hypertarget{class_point_aa624f58c5d0c803aa1f5155da70df977}\label{class_point_aa624f58c5d0c803aa1f5155da70df977} 
+\index{Point@{Point}!translate@{translate}}
+\index{translate@{translate}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} \texorpdfstring{$\ast$}{*} Point\+::translate (\begin{DoxyParamCaption}\item[{double}]{\+\_\+x,  }\item[{double}]{\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+This function is used to shift the point in x and y direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & the x and y values of the point\\
+\hline
+\end{DoxyParams}
+
+
+\begin{DoxyReturn}{Returns}
+It returns the shifted point. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_point_a8c779e11e694b20e0946105a9f5de842}\label{class_point_a8c779e11e694b20e0946105a9f5de842} 
+\index{Point@{Point}!x@{x}}
+\index{x@{x}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int Point\+::x}
+
+\Hypertarget{class_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}\label{class_point_a2e1b5fb2b2a83571f5c0bc0f66a73cf7} 
+\index{Point@{Point}!y@{y}}
+\index{y@{y}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int Point\+::y}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/polaris/fractal-\/trees/src/\+Headers/\mbox{\hyperlink{_point_8hpp}{Point.\+hpp}}\item 
+/home/polaris/fractal-\/trees/src/\mbox{\hyperlink{_point_8cpp}{Point.\+cpp}}\end{DoxyCompactItemize}
