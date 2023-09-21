@@ -15,7 +15,8 @@ void init()
 {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(0, 200, 0, 200, -1, 1);
+
+    glOrtho(0, WIDTH, 0, HEIGHT, -1, 1);
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -25,6 +26,7 @@ void init()
 void render()
 {
     glClear(GL_COLOR_BUFFER_BIT);
+    // new Line(new Point(320, 20), new Point(311, 37));
     new Tree(new Point(100, 100), 40);
     glutSwapBuffers();
 }
@@ -33,7 +35,7 @@ void render()
 // Returns integer for error handling
 int main(int argc, char **argv)
 {
-    WIDTH = 640, HEIGHT = 480;
+    WIDTH = 1080, HEIGHT = 1080;
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 

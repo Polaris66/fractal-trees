@@ -21,7 +21,7 @@ void Point::render()
 {
     glBegin(GL_POINTS);
     glColor3f(1, 1, 1);
-    std::cout << x << ' ' << y << '\n';
+    // this->print();
     glVertex2i(x, y);
     glEnd();
 }
@@ -30,7 +30,6 @@ void Point::renderTranslated(int _x, int _y)
 {
     glBegin(GL_POINTS);
     glColor3f(1, 1, 1);
-    std::cout << x << ' ' << y << '\n';
     glVertex2i(x + _x, y + _y);
     glEnd();
 }
@@ -45,6 +44,11 @@ void Point::reflectDiagonal()
     std::swap(x, y);
 }
 
+void Point::print()
+{
+    std::cout << x << ' ' << y << std::endl;
+}
+
 void Point::reflectX()
 {
     x *= -1;
@@ -54,3 +58,25 @@ void Point::reflectY()
 {
     y *= -1;
 }
+
+void Point::renderReflectedDiagonal()
+{
+    glBegin(GL_POINTS);
+    glColor3f(1, 1, 1);
+    glVertex2i(y, x);
+    glEnd();
+};
+void Point::renderReflectedX()
+{
+    glBegin(GL_POINTS);
+    glColor3f(1, 1, 1);
+    glVertex2i(-x, y);
+    glEnd();
+};
+void Point::renderReflectedY()
+{
+    glBegin(GL_POINTS);
+    glColor3f(1, 1, 1);
+    glVertex2i(x, -y);
+    glEnd();
+};

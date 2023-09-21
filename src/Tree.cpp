@@ -12,12 +12,12 @@ Tree::Tree(Point *_root, int _depth, int _scale)
 Tree::Tree(Point *_root, int _depth)
 {
     scale = 100;
-    render(5, 0.4485496, 0.1, 10);
+    render(5, 0.3926991, 0.1, 20);
 }
 void Tree::render(int n, double dA, double dL, double L)
 {
     std::stack<std::pair<Point *, std::pair<double, double>>> St;
-    std::unordered_map<char, std::string> m = {{'F', "F[+F]F[-F]F"}};
+    std::unordered_map<char, std::string> m = {{'F', "FF-[-F+F+F]+[+F - F - F]"}};
     std::string word = nthWord("F", m, n);
 
     Point *p = new Point(320, 0);
@@ -25,11 +25,15 @@ void Tree::render(int n, double dA, double dL, double L)
 
     for (char c : word)
     {
+        std::cout << c << std::endl;
         switch (c)
         {
         case 'F':
             new Line(p, theta, L);
-            p = p->translate(std::cos(theta), std::sin(theta));
+            p->print();
+            std::cout << p << ' ' << theta << ' ' << L << std::endl;
+            p = p->translate(L * std::cos(theta), L * std::sin(theta));
+            p->print();
             break;
         case '+':
             theta += dA;
@@ -38,7 +42,9 @@ void Tree::render(int n, double dA, double dL, double L)
             theta -= dA;
             break;
         case '[':
-            St.push({p, {theta, L}});
+            St.push({p->copy(), {theta, L}});
+            p->print();
+            std::cout << theta << ' ' << L << std::endl;
             L -= dL;
             break;
         case ']':
@@ -47,6 +53,8 @@ void Tree::render(int n, double dA, double dL, double L)
             p = prev.first;
             theta = prev.second.first;
             L = prev.second.second;
+            p->print();
+            std::cout << theta << ' ' << L << std::endl;
             break;
         }
     }
@@ -59,7 +67,6 @@ std::string Tree::nthWord(std::string s, std::unordered_map<char, std::string> m
     for (int i = 1; i <= n; i++)
     {
         s = nextWord(s, m);
-        std::cout << s << std::endl;
     }
 
     return s;

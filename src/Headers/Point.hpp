@@ -9,6 +9,10 @@ public:
     void render();
     void renderTranslated(int _x, int _y);
     Point *copy();
+    void print();
+    void renderReflectedDiagonal();
+    void renderReflectedX();
+    void renderReflectedY();
     void reflectDiagonal();
     void reflectX();
     void reflectY();
