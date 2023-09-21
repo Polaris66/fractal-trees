@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cmath>
 #include "Headers/Line.hpp"
 
 Line::Line(Point *_a, Point *_b)
@@ -15,6 +15,11 @@ Line::Line(Point *_a, Point *_b, bool flag)
     {
         render();
     }
+}
+
+Line::Line(Point *_a, double theta, double l)
+{
+    Line(_a, _a->copy()->translate(l * std::cos(theta), l * std::sin(theta)));
 }
 
 void Line::render()

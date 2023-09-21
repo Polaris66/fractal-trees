@@ -9,7 +9,7 @@ Point::Point(int _x, int _y)
     y = _y;
 }
 
-Point *Point::translate(int _x, int _y)
+Point *Point::translate(double _x, double _y)
 {
     x += _x;
     y += _y;

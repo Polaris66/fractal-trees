@@ -68,6 +68,7 @@
     "cinttypes": "cpp",
     "typeindex": "cpp",
     "__nullptr": "cpp",
-    "filesystem": "cpp"
+    "filesystem": "cpp",
+    "stack": "cpp"
   }
 }

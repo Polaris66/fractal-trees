@@ -1,5 +1,6 @@
 #include <GL/glut.h>
 #include <iostream>
+#include <stack>
 
 #include "Headers/Point.hpp"
 #include "Headers/Line.hpp"

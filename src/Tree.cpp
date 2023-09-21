@@ -5,7 +5,6 @@
 Tree::Tree(Point *_root, int _depth, int _scale)
 {
     scale = _scale;
-    render(_root, _depth);
 }
 
 Tree::Tree(Point *_root, int _depth)
@@ -15,24 +14,8 @@ Tree::Tree(Point *_root, int _depth)
     nthWord("F", m, 3);
     // render(_root, _depth);
 }
-void Tree::render(Point *root, int depth)
-{
-    if (depth == 0)
-        return;
+void Tree::render(int n, int dA, int dL, int L){
 
-    int l = depth * scale;
-
-    Point *p1 = root->copy()->translate(l, 0);
-    Point *p2 = root->copy()->translate(l, l);
-    Point *p3 = root->copy()->translate(0, l);
-
-    new Line(root, p1);
-    new Line(root, p2);
-    new Line(root, p3);
-
-    render(p1, depth - 1);
-    render(p2, depth - 1);
-    render(p3, depth - 1);
 };
 
 std::string Tree::nthWord(std::string s, std::unordered_map<char, std::string> m, int n)
